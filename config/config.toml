@@ -1,0 +1,9 @@
+[app]
+name = "zchat"
+port = 8088
+server_id = "zchat321"
+
+[database]
+
+[log]
+log_dir = "./logs"

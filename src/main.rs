@@ -1,8 +1,13 @@
 use anyhow::Result;
+use zchat::serve::*;
+
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    println!("Hello, world!");
+
+    let server: Server = Server::new();
+
+    server.run().await?;
 
     Ok(())
 }
