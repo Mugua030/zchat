@@ -34,10 +34,10 @@ pub fn get_router(config: AppConfig) -> Router {
     let chat_routes = Router::new()
         .route("/chat", get(list_chat_handler).post(create_chat_handler))
         .route(
-            "/chat/:id", 
+            "/chat/:id",
             patch(update_chat_handler)
-                            .delete(delete_chat_handler)
-                            .post(send_msg_handler)
+                .delete(delete_chat_handler)
+                .post(send_msg_handler),
         )
         .route("/chat/:id/msg", get(list_msg_handler));
 
@@ -50,7 +50,6 @@ pub fn get_router(config: AppConfig) -> Router {
     // - POST /api/signup
     // - GET  /api/chat
     Router::new().nest("/api", api_routes).with_state(state)
-
 }
 
 impl AppState {

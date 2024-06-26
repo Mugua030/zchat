@@ -17,6 +17,6 @@ pub(crate) async fn sse_handler(
     Sse::new(stream).keep_alive(
         axum::response::sse::KeepAlive::new()
             .interval(Duration::from_secs(1))
-            .text("keep-alive-text")
+            .text("keep-alive-text"),
     )
 }
