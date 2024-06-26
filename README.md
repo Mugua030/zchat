@@ -1,2 +1,2 @@
 ### mini chat
-    A communication tool
+    just learn: A communication tool
