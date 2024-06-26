@@ -1,2 +1,2 @@
-### mini chat 
-> single
+### mini chat
+    A communication tool
